@@ -68,27 +68,33 @@
       <!-- Navbar -->
       <nav class="navbar navbar-expand-lg bg-navbar-theme">
         <div class="container-fluid">
-          <a class="navbar-brand" href="main.html">Navbar</a>
+          <a class="navbar-brand" href="javascript:void(0)">Navbar</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-ex-5">
             <span class="navbar-toggler-icon"></span>
           </button>
 
           <div class="collapse navbar-collapse" id="navbar-ex-5">
             <div class="navbar-nav me-auto">
-              <a class="nav-item nav-link" href="/html/main/index.html">MAIN</a>
+              <a class="nav-item nav-link active" href="/html/main/index.html">MAIN</a>
               <a class="nav-item nav-link" href="/html/community/community.html">COMMUNITY</a>
               <a class="nav-item nav-link" href="/html/community/chat.html">CHAT</a>
               <a class="nav-item nav-link" href="/html/community/community-mail.html">MAIL</a>
+              <a class="nav-item nav-link" href="/html/auction/auction.html">AUCTION</a>
               <a class="nav-item nav-link" href="/html/power/power-plant.html">POWER PLANT</a>
             </div>
             <ul class="navbar-nav ms-lg-auto">
               <li class="nav-item">
-                <a class="nav-link" href="../mypage/pages-profile-userprofile.html"><i
+                <a class="nav-link" href="/html/mypage/pages-profile-userprofile.html"><i
                     class="tf-icons navbar-icon ti ti-user ti-xs me-1"></i> Profile</a>
               </li>
+              <!-- <li class="nav-item">
+                <a class="nav-link" href="login.html"
+                  ><i class="tf-icons navbar-icon ti ti-lock-open-off ti-xs me-1"></i> Login</a
+                >
+              </li> -->
               <li class="nav-item">
-                <a class="nav-link" href="javascript:void(0);"><i
-                    class="tf-icons navbar-icon ti ti-lock-open ti-xs me-1"></i> Logout</a>
+                <a class="nav-link" href="index.html"><i class="tf-icons navbar-icon ti ti-lock-open ti-xs me-1"></i>
+                  Logout</a>
               </li>
             </ul>
           </div>
@@ -135,9 +141,9 @@
               </div>
             </div><!--/ Navbar pills -->
             <!-- Container box -->
-            <div class="row mt-5">
+            
               <!-- Header -->
-              <div class="col-12">
+              <div class="col-12 mt-5">
                 <div class="card mb-4">
                   <div class="user-profile-header d-flex flex-column flex-sm-row text-sm-start text-end mb-4">
                     <div class="flex-shrink-0 mt-n2 mx-sm-0 mx-auto">
@@ -174,7 +180,10 @@
 
 
                               <!-- Button trigger modal -->
-                              <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                              <button 
+                                type="button" 
+                                class="btn btn-primary" 
+                                data-bs-toggle="modal"
                                 data-bs-target="#modalCenter">
                                 <i class="ti ti-link me-1"></i>비밀번호 변경
                               </button>
@@ -236,8 +245,6 @@
                   </div>
                 </div>
               </div><!--/ Header -->
-
-
               <!-- Content -->
               <div class="row">
                 <!-- left side-->
@@ -296,7 +303,6 @@
                         </div>
                       </div>
                     </div>
-
                     <div class="card-body">
                       <ul class="list-unstyled mb-0">
                         <li class="mb-3">
@@ -535,9 +541,6 @@
                   </div>
                   <!--/ min POWER-->
                 </div> <!-- Left side -->
-
-
-
                 <!-- right side-->
                 <div class="col-xl-8 col-lg-7 col-md-7 ">
                   <!-- min notification -->
@@ -877,7 +880,6 @@
                   
                 </div> <!--/ right side-->
               </div> <!--/ content-->
-            </div> <!--/ container box-->
             <!-- Footer -->
             <footer class="content-footer footer bg-footer-theme">
               <div class="container-xxl">

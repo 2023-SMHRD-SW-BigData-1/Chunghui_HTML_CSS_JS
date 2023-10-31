@@ -2,7 +2,7 @@
 
 <html
   lang="en"
-  class="light-style layout-menu-fixed layout-compact"
+  class="light-style layout-wide customizer-hide"
   dir="ltr"
   data-theme="theme-default"
   data-assets-path="/assets/"
@@ -13,7 +13,7 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
 
-    <title>Typography - UI elements | Vuexy - Bootstrap Admin Template</title>
+    <title>Register Cover - Pages | Vuexy - Bootstrap Admin Template</title>
 
     <meta name="description" content="" />
 
@@ -23,7 +23,9 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&ampdisplay=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&ampdisplay=swap"
+      rel="stylesheet" />
 
     <!-- Icons -->
     <link rel="stylesheet" href="/assets/vendor/fonts/fontawesome.css" />
@@ -39,12 +41,12 @@
     <link rel="stylesheet" href="/assets/vendor/libs/node-waves/node-waves.css" />
     <link rel="stylesheet" href="/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css" />
     <link rel="stylesheet" href="/assets/vendor/libs/typeahead-js/typeahead.css" />
+    <!-- Vendor -->
+    <link rel="stylesheet" href="/assets/vendor/libs/@form-validation/umd/styles/index.min.css" />
 
     <!-- Page CSS -->
-
-    
-    <!-- shine-CSS-->
-    <link rel="stylesheet" href="/assets/vendor/css/shine/sh-main.css">
+    <!-- Page -->
+    <link rel="stylesheet" href="/assets/vendor/css/pages/page-auth.css" />
 
     <!-- Helpers -->
     <script src="/assets/vendor/js/helpers.js"></script>
@@ -56,88 +58,142 @@
   </head>
 
   <body>
-    <!-- Layout wrapper -->
-    <div class="layout-wrapper layout-navbar-full layout-horizontal layout-without-menu">
-      <div class="layout-container">
-        <!-- Navbar -->
-        <nav class="navbar navbar-expand-lg bg-navbar-theme">
-          <div class="container-fluid">
-            <a class="navbar-brand" href="main.html">Navbar</a>
-            <button
-              class="navbar-toggler"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#navbar-ex-5">
-              <span class="navbar-toggler-icon"></span>
-            </button>
+    <!-- Content -->
 
-            <div class="collapse navbar-collapse" id="navbar-ex-5">
-              <div class="navbar-nav me-auto">
-                <a class="nav-item nav-link" href="/html/main/index.html">MAIN</a>
-                <a class="nav-item nav-link" href="/html/community/community.html">COMMUNITY</a>
-                <a class="nav-item nav-link" href="/html/community/chat.html">CHAT</a>
-                <a class="nav-item nav-link" href="/html/community/community-mail.html">MAIL</a>
-                <a class="nav-item nav-link" href="/html/power/power-plant.html">POWER PLANT</a>
+    <div class="authentication-wrapper authentication-cover authentication-bg">
+      <div class="authentication-inner row">
+        <!-- Left Side -->
+        <div class="d-flex col-12 col-lg-5 align-items-center p-sm-5 p-4">
+          <div class="w-px-400 mx-auto">
+            <!-- Logo -->
+            <div class="app-brand mb-4">
+              <a href="index.html" class="app-brand-link gap-2">
+                <span class="app-brand-logo demo" style="width: 60px; height: 60px;">
+                  <img src="/assets/img/branding/shinelogosm.png" class="w-100" alt="">
+                </span>
+              </a>
+            </div>
+            <!-- /Logo -->
+            <h3 class="mb-1">회원가입 🚀</h3>
+            <p class="mb-4">SHINE에 멤버가 되시는걸 환영합니다!</p>
+
+            <form id="formAuthentication" class="mb-3" action="index.html" method="POST">
+              <div class="mb-3">
+                <label for="username" class="form-label">닉네임</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="username"
+                  name="username"
+                  placeholder="닉네임를 입력하세요"
+                  autofocus />
               </div>
-              <ul class="navbar-nav ms-lg-auto">
-                <li class="nav-item">
-                  <a class="nav-link" href="javascript:void(0);"
-                    ><i class="tf-icons navbar-icon ti ti-user ti-xs me-1"></i> Profile</a
-                  >
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="javascript:void(0);"
-                    ><i class="tf-icons navbar-icon ti ti-lock-open ti-xs me-1"></i> Logout</a
-                  >
-                </li>
-              </ul>
-            </div>
-          </div>
-        </nav>
-        <!-- / Navbar -->
 
-        <!-- Layout container -->
-        <div class="layout-page">
-          <!-- Content wrapper -->
-          <div class="content-wrapper">
-            <!-- Content -->
-            <div class="container-xxl flex-grow-1 container-p-y">
-            </div>
-            <!--/ Content -->
+              <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="text" class="form-control" id="email" name="email" placeholder="Enter your email" />
+              </div>
 
-            <!-- Footer -->
-            <footer class="content-footer footer bg-footer-theme">
-              <div class="container-xxl">
-                <div
-                  class="footer-container d-flex align-items-center justify-content-between py-2 flex-md-row flex-column">
-                  <div>
-                    ©
-                    <script>
-                      document.write(new Date().getFullYear());
-                    </script>
-                    , made with ❤️ by Royal
-                  </div>
+
+              <div class="mb-3 form-password-toggle">
+                <label class="form-label" for="password">Password</label>
+                <div class="input-group input-group-merge">
+                  <input
+                    type="password"
+                    id="password"
+                    class="form-control"
+                    name="password"
+                    placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;"
+                    aria-describedby="password" />
+                  <span class="input-group-text cursor-pointer"><i class="ti ti-eye-off"></i></span>
                 </div>
               </div>
-            </footer>
-            <!-- / Footer -->
 
-            <div class="content-backdrop fade"></div>
+              <div class="mb-3">
+                <label for="username" class="form-label">이름</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="username"
+                  name="username"
+                  placeholder="이름을 입력하세요e"
+                  autofocus />
+              </div>
+
+              <div class="mb-3">
+                <label for="username" class="form-label">주소</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="username"
+                  name="username"
+                  placeholder="주소를 입력하세요"
+                  autofocus />
+              </div>
+
+              <div class="mb-3">
+                <label for="username" class="form-label">핸드폰번호</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="username"
+                  name="username"
+                  placeholder="핸드폰번호를 입력하세요"
+                  autofocus />
+              </div>
+              <button class="btn btn-primary d-grid w-100">회원가입</button>
+            </form>
+
+            <p class="text-center">
+              <span>회원정보가 있으십니까?</span>
+              <a href="login.html">
+                <span>로그인화면</span>
+              </a>
+            </p>
+
+            <div class="divider my-4">
+              <div class="divider-text">or</div>
+            </div>
+
+            <div class="d-flex justify-content-center">
+              <a href="javascript:;" class="btn btn-icon btn-label-facebook me-3">
+                <i class="tf-icons fa-brands fa-facebook-f fs-5"></i>
+              </a>
+
+              <a href="javascript:;" class="btn btn-icon btn-label-google-plus me-3">
+                <i class="tf-icons fa-brands fa-google fs-5"></i>
+              </a>
+
+              <a href="javascript:;" class="btn btn-icon btn-label-twitter">
+                <i class="tf-icons fa-brands fa-twitter fs-5"></i>
+              </a>
+            </div>
           </div>
-          <!--/ Content wrapper -->
-        </div>
+        </div><!-- /Left side -->
+        <!-- right side-->
+        <div class="d-none d-lg-flex col-lg-7 p-0">
+          <div class="auth-cover-bg auth-cover-bg-color d-flex justify-content-center align-items-center">
+            <img
+              src="/assets/img/illustrations/auth-register-illustration-light.png"
+              alt="auth-register-cover"
+              class="img-fluid my-5 auth-illustration"
+              data-app-light-img="illustrations/auth-register-illustration-light.png"
+              data-app-dark-img="illustrations/auth-register-illustration-dark.png" />
 
-        <!--/ Layout container -->
+            <img
+              src="/assets/img/illustrations/bg-shape-image-light.png"
+              alt="auth-register-cover"
+              class="platform-bg"
+              data-app-light-img="illustrations/bg-shape-image-light.png"
+              data-app-dark-img="illustrations/bg-shape-image-dark.png" />
+          </div>
+        </div><!-- right side-->
+
+
       </div>
     </div>
 
-    <!-- Overlay -->
-    <div class="layout-overlay layout-menu-toggle"></div>
-
-    <!-- Drag Target Area To SlideIn Menu On Small Screens -->
-    <div class="drag-target"></div>
-
-    <!--/ Layout wrapper -->
+    <!-- / Content -->
 
     <!-- Core JS -->
     <!-- build:js assets/vendor/js/core.js -->
@@ -155,10 +211,14 @@
     <!-- endbuild -->
 
     <!-- Vendors JS -->
+    <script src="/assets/vendor/libs/@form-validation/umd/bundle/popular.min.js"></script>
+    <script src="/assets/vendor/libs/@form-validation/umd/plugin-bootstrap5/index.min.js"></script>
+    <script src="/assets/vendor/libs/@form-validation/umd/plugin-auto-focus/index.min.js"></script>
 
     <!-- Main JS -->
     <script src="/assets/js/main.js"></script>
 
     <!-- Page JS -->
+    <script src="/assets/js/pages-auth.js"></script>
   </body>
 </html>
